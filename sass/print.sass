@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700')
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600')
+
+$paper-padding-top: 1cm
+$paper-padding-left: 3cm
+
+h1
+    font-family: 'Source Sans Pro', sans-serif
+
+ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+
+.inv-invoice
+    font-family: 'Roboto', sans-serif
+    color: #222
+
+.inv-invoice
+    overflow: auto
+    margin: 0
+
+.inv-invoice__paper
+    font-size: 12pt
+    overflow: auto
+    width: 21.0cm
+    height: 29.7cm
+    background-color: #fff
+    padding: $paper-padding-top 0
+    box-sizing: border-box
+    position: relative
+
+.inv-list--right
+    text-align: right
+
+.inv-list--inline
+    li
+        display: inline
+
+.inv-font--sm
+    font-size: 9pt
+
+
+.mark-top
+    left: 0
+    width: 0.4cm
+    position: absolute
+    top: 10.5cm
+    border-top: solid 1pt #999
+    margin-left: 0.5cm
+    margin-right: 0.5cm
+
+.mark--right
+    left: auto
+    right: 0
+
+.mark-mid
+    border-top: solid 1pt #999
+    width: 0.6cm
+    position: absolute
+    margin-left: 0.3cm
+    top: 50%
+
+.material-icons
+    vertical-align: middle
+
+.link-style
+    color: #ff7f94
+    font-weight: bold
+
+@import comp/header
+@import comp/letter
+@import comp/footer

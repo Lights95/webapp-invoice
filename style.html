@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Invoice</title>
+        <link rel="stylesheet" href="stylesheets/print.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="stylesheets/view.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="stylesheets/print.css" media="print" charset="utf-8">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body class="inv-invoice">
+        <div class="inv-menu">
+
+        </div>
+        <div class="inv-invoice-holder">
+            <article class="inv-invoice__paper">
+                <header class="inv-header">
+                    <section class="inv-from">
+                        <ul class="inv-list inv-list--right">
+                            <li>Marvin Klimm</li>
+                            <li>Peter-König-Str. 25</li>
+                            <li>51643 Gummersbach</li>
+                            <li>Germany</li>
+                        </ul>
+                        <ul class="inv-list inv-list--right inv-data">
+                            <li>Kunden-Nr.: <span class="inv-data__element">1002</span></li>
+                            <li>Rechnungs-Nr.: <span class="inv-data__element">1008</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="inv-to">
+                        <div class="inv-to__from-addr inv-font--sm">
+                            <span>Marvin Klimm</span>
+                            <span>Peter-König-Str. 25</span>
+                            <span>51643 Gummersbach</span>
+                            <!--<span>Germany</span>-->
+                        </div>
+                        <ul class="inv-list inv-to__address">
+                            <li>Anwaltskanzlei Reinhold</li>
+                            <li>Christoph Reinhold</li>
+                            <li>In der Aue 1</li>
+                            <li>51674 Wiehl</li>
+                        </ul>
+                    </section>
+
+                    <span class="inv-header__date">03.11.2016</span>
+                </header>
+                <div class="mark-top"></div>
+                <div class="mark-top mark--right"></div>
+                <div class="mark-mid"></div>
+                <main class="inv-letter">
+                    <section class="inv-intro">
+                        <h1>Rechnung Nr. 1008</h1>
+                        <p>
+                            Sehr geehrter Herr Reinhold,<br/>
+                            hiermit stelle ich die aufgeführten Leistungen in Rechnung.
+                        </p>
+                    </section>
+                    <section class="inv-table">
+                        <div class="inv-table__element">
+                            <div class="inv-table__position">#1</div>
+                            <div class="inv-table__description">
+                                <span>23.08.2016 </span>
+                                <span><i class="material-icons">keyboard_arrow_right</i></span>
+                                <span>Lorem ipsum dolor sit ametsit ametsit ametsit ametsit amet, consetetur sadipscing elitr, sed diam</span>
+                            </div>
+                            <div class="inv-table__price">
+                                6.00 Std. x 27.50 €/Std. = 165.00 €
+                            </div>
+                        </div>
+
+                        <div class="inv-table__element">
+                            <div class="inv-table__position">#77</div>
+                            <div class="inv-table__description">
+                                <span>23.08.2016 </span>
+                                <span><i class="material-icons">keyboard_arrow_right</i></span>
+                                <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</span>
+                            </div>
+                            <div class="inv-table__price">
+                                6.00 Std. x 27.50 €/Std. = 165.00 €
+                            </div>
+                        </div>
+                        <div class="inv-table__total">
+                            Summe: 450.50 €
+                        </div>
+                    </section>
+                    <section class="inv-final">
+                        <p class="inv-note">Hinweis: Gemäß §19 Abs. 1 UStG wird keine Umsatzsteuer erhoben.</p>
+                        <p class="inv-final__text">
+                            Bitte überweisen Sie die Rechnungssumme auf das unten angegebene Konto.<br/>
+                            Im Verwendungszweck erwähnen Sie bitte die Rechnungsnummer.
+                        </p>
+                        <p>
+                            Mit freundlichen Grüßen,</br>
+                            Marvin Klimm
+                        </p>
+                    </section>
+                </main>
+                <footer class="inv-footer">
+                    <div class="inv-footer__section-holder">
+                        <section class="inv-footer__section">
+                            <ul class="inv-list">
+                                <li><i class="material-icons">mail_outline</i>marvin@klimms.de</li>
+                                <li><i class="material-icons">phone</i>02261 9795580</li>
+                                <li><i class="material-icons">speaker_phone</i>+49 1575 2718856</li>
+                            </ul>
+                        </section>
+                        <section class="inv-footer__section">
+                            <ul class="inv-list">
+                                <li>Marvin Christian Klimm</li>
+                                <li><b>DE21 3845 0000 1000 1275 12</b></li>
+                                <li>WELADED1GMB</li>
+                                <li>Sparkasse Gummersbach Bergneustadt</li>
+                            </ul>
+                        </section>
+                        <section class="inv-footer__section">
+                            <ul class="inv-list">
+                                <li>Steuernummer:</li>
+                                <li>5212 5120 3037</li>
+                                <li><br></li>
+                                <li>Finanzamt:</li>
+                                <li>Gummersbach</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="inv-footer__section-holder inv-footer__section-holder--bottom">
+                        <div class="inv-footer__section--bottom">
+                            <br/>
+                        </div>
+                        <div class="inv-footer__section--bottom">
+                            Invoice developed with <i class="material-icons link-style">favorite</i> by <a class="link-style" href="https://www.linkedin.com/in/marvin-klimm">linkedin.com/in/marvin-klimm</a>
+                        </div>
+                        <div class="inv-footer__section--bottom">
+                            Seite 1/2
+                        </div>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="inv-invoice__paper">
+                <div class="mark-top"></div>
+                <div class="mark-top mark--right"></div>
+                <div class="mark-mid"></div>
+                <main class="inv-letter">
+                    <section class="inv-intro">
+                        <h1>Rechnung Nr. 1008 - Seite 2</h1>
+                    </section>
+                    <section class="inv-table">
+                        <div class="inv-table__element">
+                            <div class="inv-table__position">#1</div>
+                            <div class="inv-table__description">
+                                <span>23.08.2016 </span>
+                                <span><i class="material-icons">keyboard_arrow_right</i></span>
+                                <span>Lorem ipsum dolor sit ametsit ametsit ametsit ametsit amet, consetetur sadipscing elitr, sed diam</span>
+                            </div>
+                            <div class="inv-table__price">
+                                6.00 Std. x 27.50 €/Std. = 165.00 €
+                            </div>
+                        </div>
+
+                        <div class="inv-table__element">
+                            <div class="inv-table__position">#77</div>
+                            <div class="inv-table__description">
+                                <span>23.08.2016 </span>
+                                <span><i class="material-icons">keyboard_arrow_right</i></span>
+                                <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</span>
+                            </div>
+                            <div class="inv-table__price">
+                                6.00 Std. x 27.50 €/Std. = 165.00 €
+                            </div>
+                        </div>
+                        <div class="inv-table__total">
+                            Summe: 450.50 €
+                        </div>
+                    </section>
+                    <section class="inv-final">
+                        <p class="inv-note">Hinweis: Gemäß §19 Abs. 1 UStG wird keine Umsatzsteuer erhoben.</p>
+                        <p class="inv-final__text">
+                            Bitte überweisen Sie die Rechnungssumme auf das unten angegebene Konto.<br/>
+                            Im Verwendungszweck erwähnen Sie bitte die Rechnungsnummer.
+                        </p>
+                        <p>
+                            Mit freundlichen Grüßen,</br>
+                            Marvin Klimm
+                        </p>
+                    </section>
+                </main>
+                <footer class="inv-footer">
+                    <div class="inv-footer__section-holder">
+                        <section class="inv-footer__section">
+                            <ul class="inv-list">
+                                <li><i class="material-icons">mail_outline</i>marvin@klimms.de</li>
+                                <li><i class="material-icons">phone</i>02261 9795580</li>
+                                <li><i class="material-icons">speaker_phone</i>+49 1575 2718856</li>
+                            </ul>
+                        </section>
+                        <section class="inv-footer__section">
+                            <ul class="inv-list">
+                                <li>Marvin Christian Klimm</li>
+                                <li><b>DE21 3845 0000 1000 1275 12</b></li>
+                                <li>WELADED1GMB</li>
+                                <li>Sparkasse Gummersbach Bergneustadt</li>
+                            </ul>
+                        </section>
+                        <section class="inv-footer__section">
+                            <ul class="inv-list">
+                                <li>Steuernummer:</li>
+                                <li>5212 5120 3037</li>
+                                <li><br></li>
+                                <li>Finanzamt:</li>
+                                <li>Gummersbach</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="inv-footer__section-holder inv-footer__section-holder--bottom">
+                        <div class="inv-footer__section--bottom">
+                            <br/>
+                        </div>
+                        <div class="inv-footer__section--bottom">
+                            Invoice developed with <i class="material-icons link-style">favorite</i> by <a class="link-style" href="https://www.linkedin.com/in/marvin-klimm">linkedin.com/in/marvin-klimm</a>
+                        </div>
+                        <div class="inv-footer__section--bottom">
+                            Seite 1/2
+                        </div>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </body>
+</html>
