@@ -10,12 +10,13 @@ export default class Invoice extends React.Component {
         };
     }
     newPage(e, letterEnd, total, table) {
-        console.log(e,letterEnd, total, table);
         this.setState(
             {
                 pages: 2,
                 overflow: e,
-                letterEnd: letterEnd
+                letterEnd: letterEnd,
+                total: total,
+                table: table
             }
         );
     }
@@ -23,8 +24,12 @@ export default class Invoice extends React.Component {
     render() {
         var invoicePages = [];
         var config = [];
+        var services = [];
+
+        services[0] = this.props.data.services;
 
         for (var i=0; i<this.state.pages; i++) {
+            if(i>0) services[i] = [];
             config[i] = {
                 table: false,
                 total: false,
@@ -33,7 +38,7 @@ export default class Invoice extends React.Component {
                 totalPages: this.state.pages,
                 page: 1+i
             };
-            invoicePages[i] = <InvoicePage key={i} newPage={this.newPage.bind(this)} data={this.props.data} config={config[i]}/>;
+            invoicePages[i] = <InvoicePage key={i} newPage={this.newPage.bind(this)} data={this.props.data} tableElements={services[i]} config={config[i]}/>;
         }
 
         config[0].header = true;
@@ -49,8 +54,9 @@ export default class Invoice extends React.Component {
             if(this.state.overflow>this.state.letterEnd) {
                 config[0].total = false;
                 config[1].total = true;
-                if(this.state.overflow>this.state.letterEnd.total) {
-                    console.log("hi");
+                if(this.state.overflow>this.state.total) {
+                    services[1].unshift(services[0].pop());
+                    config[1].table = true;
                 }
             }
         }

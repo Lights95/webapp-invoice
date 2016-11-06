@@ -1,0 +1,68 @@
+{
+    "id": 1009,
+    "date": "07.11.2016",
+
+    "services": [
+        {
+            "id": 0,
+            "date": "27.07.2016",
+            "description": "Lorem Ipsum dolor sit",
+            "hours": 2.5,
+            "fee": 60
+        },
+        {
+            "id": 0,
+            "date": "28.07.2016",
+            "description": "Lorem Ipsum dolor sit",
+            "hours": 1.25,
+            "fee": 60
+        }
+    ],
+
+    "client": {
+        "id": 1001,
+        "name": "Company of Imagination",
+
+        "contactPerson": {
+            "firstName": "Max",
+            "lastName": "Lustermann",
+            "gender": "male"
+        },
+
+        "address": {
+            "street": "Hohestraße 12",
+            "zip": 53773,
+            "city": "Köln"
+        }
+    },
+
+    "user": {
+        "companyName": "",
+        "contactPerson": {
+            "firstName": "Erich",
+            "lastName": "Muster",
+            "gender": "male"
+        },
+
+        "address": {
+            "street": "Straße zum Leben",
+            "zip": 7777,
+            "city": "Pardisia",
+            "country": "Germany"
+        },
+
+        "email": "one@mail.de",
+        "phone": "02261 123456",
+        "mobile": "+49 1232 9876543",
+
+        "bankAccount": {
+            "name": "Erich Muster",
+            "iban": "DE21 IBAN",
+            "bic": "BIC",
+            "bank": "Kreditinstitut"
+        },
+
+        "taxNumber": "212 123 456",
+        "financialDepartment": "Pardisia"
+    }
+}

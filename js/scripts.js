@@ -7,7 +7,7 @@ import Layout from "./components/Layout";
 const app = document.getElementById('app');
 const button = document.getElementById('button');
 
-loadJSON('data/example.json');
+loadJSON('data/ex.json');
 
 button.addEventListener("click", function(){
     loadJSON('data/example2.json');

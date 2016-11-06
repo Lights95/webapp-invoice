@@ -12,19 +12,19 @@ ul {
   list-style: none;
 }
 
-/* line 16, ../sass/print.sass */
+/* line 15, ../sass/print.sass */
 .inv-invoice {
   font-family: "Roboto", sans-serif;
   color: #222;
 }
 
-/* line 20, ../sass/print.sass */
+/* line 19, ../sass/print.sass */
 .inv-invoice {
   overflow: auto;
   margin: 0;
 }
 
-/* line 24, ../sass/print.sass */
+/* line 23, ../sass/print.sass */
 .inv-invoice__paper {
   font-size: 12pt;
   overflow: auto;
@@ -36,22 +36,22 @@ ul {
   position: relative;
 }
 
-/* line 34, ../sass/print.sass */
+/* line 33, ../sass/print.sass */
 .inv-list--right {
   text-align: right;
 }
 
-/* line 38, ../sass/print.sass */
+/* line 37, ../sass/print.sass */
 .inv-list--inline li {
   display: inline;
 }
 
-/* line 41, ../sass/print.sass */
+/* line 40, ../sass/print.sass */
 .inv-font--sm {
   font-size: 9pt;
 }
 
-/* line 45, ../sass/print.sass */
+/* line 44, ../sass/print.sass */
 .mark-top {
   left: 0;
   width: 0.4cm;
@@ -62,13 +62,13 @@ ul {
   margin-right: 0.5cm;
 }
 
-/* line 54, ../sass/print.sass */
+/* line 53, ../sass/print.sass */
 .mark--right {
   left: auto;
   right: 0;
 }
 
-/* line 58, ../sass/print.sass */
+/* line 57, ../sass/print.sass */
 .mark-mid {
   border-top: solid 1pt #999;
   width: 0.6cm;
@@ -77,17 +77,23 @@ ul {
   top: 50%;
 }
 
-/* line 65, ../sass/print.sass */
+/* line 64, ../sass/print.sass */
 .material-icons {
   vertical-align: middle;
 }
 
-/* line 68, ../sass/print.sass */
+/* line 67, ../sass/print.sass */
 .link-style {
   color: #ff7f94;
   font-weight: bold;
 }
 
+@media print {
+  /* line 72, ../sass/print.sass */
+  .inv-menu {
+    display: none;
+  }
+}
 /* line 1, ../sass/comp/_header.sass */
 .inv-header {
   width: 100%;

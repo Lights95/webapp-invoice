@@ -47,7 +47,7 @@ export default class InvoiceFooter extends React.Component {
                         <br/>
                     </div>
                     <div class="inv-footer__section--bottom">
-                        Invoice developed with <i class="material-icons link-style">favorite</i> by <a class="link-style" target="_blank" href="https://www.linkedin.com/in/marvin-klimm">linkedin.com/in/marvin-klimm</a>
+                        <br class="hier kommt invoice copyright rein"/>
                     </div>
                     <div class="inv-footer__section--bottom">
                         {sites}
@@ -57,3 +57,5 @@ export default class InvoiceFooter extends React.Component {
         );
     }
 }
+
+//Invoice developed with <i class="material-icons link-style">favorite</i> by <a class="link-style" target="_blank" href="https://www.linkedin.com/in/marvin-klimm">linkedin.com/in/marvin-klimm</a>
