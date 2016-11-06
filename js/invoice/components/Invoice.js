@@ -1,60 +1,65 @@
 /*jshint esversion: 6*/
 import React from "react";
-import InvoiceFrontPage from "./InvoiceFrontPage";
 import InvoicePage from "./InvoicePage";
 
 export default class Invoice extends React.Component {
     constructor() {
         super();
         this.state = {
-            pages: 1,
-            page: [
-                {
-                    config: {
-                        showEnd: false,
-                        showTotal: false,
-                        showElements: false
-                    }
-                }
-            ]
+            pages: 1
         };
     }
-    newPage(e) {
+    newPage(e, letterEnd, total, table) {
+        console.log(e,letterEnd, total, table);
         this.setState(
             {
                 pages: 2,
-                page: [
-                    {
-                        config: {
-                            showEnd: false,
-                            showTotal: true,
-                            showElements: true
-                        }
-                    }
-                ]
+                overflow: e,
+                letterEnd: letterEnd
             }
         );
     }
 
     render() {
-        var pages = this.state.pages;
-        var invoice;
+        var invoicePages = [];
+        var config = [];
 
-        if (pages > 1) {
-            invoice =
-                <div>
-                    <InvoiceFrontPage data={this.props.data} currentSite={1} totalSites={pages} />
-                    <InvoicePage data={this.props.data} currentSite={2} totalSites={pages} />
-                </div>;
+        for (var i=0; i<this.state.pages; i++) {
+            config[i] = {
+                table: false,
+                total: false,
+                end: false,
+
+                totalPages: this.state.pages,
+                page: 1+i
+            };
+            invoicePages[i] = <InvoicePage key={i} newPage={this.newPage.bind(this)} data={this.props.data} config={config[i]}/>;
         }
-        else {
-            invoice = <InvoiceFrontPage newPage={this.newPage.bind(this)} data={this.props.data} currentSite={1} totalSites={pages} config={this.state.page[0].config}/>;
+
+        config[0].header = true;
+        config[0].introduction = true;
+        config[0].table = true;
+        config[0].end = true;
+        config[0].total = true;
+
+        if(this.state.overflow>0) {
+            config[0].end = false;
+            config[1].end = true;
+
+            if(this.state.overflow>this.state.letterEnd) {
+                config[0].total = false;
+                config[1].total = true;
+                if(this.state.overflow>this.state.letterEnd.total) {
+                    console.log("hi");
+                }
+            }
         }
 
         return (
             <div>
-                {invoice}
+                {invoicePages}
             </div>
         );
+
     }
 }

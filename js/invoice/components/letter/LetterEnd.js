@@ -6,7 +6,7 @@ export default class LetterEnd extends React.Component {
         var data = this.props;
 
         return (
-            <section class="inv-final">
+            <section ref="letterEnd" class="inv-final">
                 <p class="inv-final__text">
                     Bitte überweisen Sie die Rechnungssumme auf das unten angegebene Konto.<br/>
                     Im Verwendungszweck erwähnen Sie bitte die Rechnungsnummer.
