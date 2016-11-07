@@ -12,14 +12,159 @@
     width: 100%;
   }
 
-  /* line 14, ../sass/view.sass */
+  /* line 16, ../sass/view.sass */
   .inv-invoice-holder {
-    width: 100%;
+    float: left;
+    width: 70%;
+    height: 100vh;
+    overflow-y: scroll;
   }
 
-  /* line 17, ../sass/view.sass */
+  /* line 22, ../sass/view.sass */
   .inv-invoice__paper {
     margin: 20px auto;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  /* line 1, ../sass/style/_inv-menu.sass */
+  .inv-menu {
+    float: left;
+    overflow: auto;
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(8, 26, 38, 0.6);
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  /* line 10, ../sass/style/_inv-menu.sass */
+  .inv-menu__headline {
+    overflow: auto;
+    color: #ffd89b;
+  }
+
+  /* line 3, ../sass/style/_form.sass */
+  .group {
+    position: relative;
+    margin-bottom: 45px;
+    width: 100%;
+  }
+
+  /* line 8, ../sass/style/_form.sass */
+  input {
+    background-color: transparent;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #757575;
+    outline: none;
+  }
+
+  /* LABEL ======================================= */
+  /* line 21, ../sass/style/_form.sass */
+  label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  /* active state */
+  /* line 36, ../sass/style/_form.sass */
+  input:focus ~ label, input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  /* BOTTOM BARS ================================= */
+  /* line 43, ../sass/style/_form.sass */
+  .bar {
+    position: relative;
+    display: block;
+    width: 300px;
+  }
+  /* line 47, ../sass/style/_form.sass */
+  .bar:before, .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #ffffff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  /* line 57, ../sass/style/_form.sass */
+  .bar:before {
+    left: 50%;
+  }
+  /* line 59, ../sass/style/_form.sass */
+  .bar:after {
+    right: 50%;
+  }
+
+  /* active state */
+  /* line 65, ../sass/style/_form.sass */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 100%;
+  }
+
+  /* HIGHLIGHTER ================================== */
+  /* line 70, ../sass/style/_form.sass */
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* active state */
+  /* line 81, ../sass/style/_form.sass */
+  input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+  }
+
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+    from {
+      background: #ffffff;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  @-moz-keyframes inputHighlighter {
+    from {
+      background: #ffffff;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  @keyframes inputHighlighter {
+    from {
+      background: #ffffff;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
   }
 }

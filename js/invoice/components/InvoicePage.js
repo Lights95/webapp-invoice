@@ -92,7 +92,7 @@ export default class InvoiceFrontPage extends React.Component {
 
         if (config.header)          config.header = <InvoiceHeader dataClient={data.client} dataUser={data.user} date={this.props.data.date} invoiceId={data.id}/>;
         if (config.introduction)    config.introduction = <Introduction dataContactPerson={data.client.contactPerson} invoiceId={data.id}/>;
-        else                        config.introduction = <h1> Rechnung Nr. {data.id} - Seite {config.page}</h1>;
+        else                        config.introduction = <h1> Rechnung Nr. {data.id} - Seite {config.page+1}</h1>;
         if (config.table)           config.table = <Table ref="table" tableElements={this.props.tableElements}/>;
         if (config.total)           config.total = <Total ref="total" total={data.total}/>;
         if (config.end)             config.end = <LetterEnd ref="letterEnd" dataContactPerson={data.user.contactPerson}/>;
