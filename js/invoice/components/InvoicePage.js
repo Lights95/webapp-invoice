@@ -7,6 +7,9 @@ import Total from "./letter/Total";
 import Table from "./letter/Table";
 import LetterEnd from "./letter/LetterEnd";
 
+import ConfigStore from "../../stores/ConfigStore";
+import ServicesStore from "../../stores/ServicesStore";
+
 export default class InvoiceFrontPage extends React.Component {
     componentDidMount() {
         this.checkFormat(this.refs);
@@ -21,10 +24,65 @@ export default class InvoiceFrontPage extends React.Component {
         mainHeight = refs.mainpart.clientHeight;
         mainTop = refs.mainpart.offsetTop;
 
+        var config = this.props.config;
+        var page = config.page;
         main = mainTop+mainHeight;
 
         if (main>=footerTop) {
-            this.props.newPage(main-footerTop, refs.letterEnd.refs.letterEnd.clientHeight, refs.total.refs.total.clientHeight, refs.table.refs.table.clientHeight);
+
+            if(config.end) {
+                ConfigStore.changeConfig(page, {
+                    header: true,
+                    introduction: true,
+                    table: true,
+                    total: true,
+                    end: false
+                });
+                ConfigStore.changeConfig(page+1, {
+                    header: false,
+                    introduction: false,
+                    table: false,
+                    total: false,
+                    end: true
+                });
+            }
+            else if (config.total) {
+                ConfigStore.changeConfig(page, {
+                    header: true,
+                    introduction: true,
+                    table: true,
+                    total: false,
+                    end: false
+                });
+                ConfigStore.changeConfig(page+1, {
+                    header: false,
+                    introduction: false,
+                    table: false,
+                    total: true,
+                    end: true
+                });
+
+            }
+            else if (config.table) {
+                ConfigStore.changeConfig(page, {
+                    header: true,
+                    introduction: true,
+                    table: true,
+                    total: false,
+                    end: false
+                });
+                ConfigStore.changeConfig(page+1, {
+                    header: false,
+                    introduction: false,
+                    table: true,
+                    total: true,
+                    end: true
+                });
+
+                ServicesStore.newServicesArray();
+                ServicesStore.popServiceOf(page);
+            }
+
         }
     }
 
@@ -50,7 +108,7 @@ export default class InvoiceFrontPage extends React.Component {
                     {config.total}
                     {config.end}
                 </main>
-                <InvoiceFooter ref="pageFooter" dataUser={data.user} currentSite={config.page} totalSites={config.totalPages}/>
+                <InvoiceFooter ref="pageFooter" dataUser={data.user} currentSite={config.page+1} totalSites={ConfigStore.getAll().length}/>
             </article>
         );
     }
