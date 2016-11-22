@@ -1,12 +1,15 @@
-$color-input: #ffffff
+$color-input: #ffd89b
 
 .group
     position: relative
     margin-bottom: 45px
     width: 100%
+    box-sizing: border-box
 
 input
+    color: #fff
     background-color: transparent
+    box-sizing: border-box
     width: 100%
     font-size: 18px
     padding: 10px 10px 10px 5px
@@ -14,7 +17,7 @@ input
     border: none
     border-bottom: 1px solid #757575
     &:focus
-    outline: none
+        outline: none
 
 /* LABEL =======================================
 
@@ -24,7 +27,7 @@ label
     font-weight: normal
     position: absolute
     pointer-events: none
-    left: 5px
+    left: 0px
     top: 10px
     transition: 0.2s ease all
     -moz-transition: 0.2s ease all
@@ -41,9 +44,10 @@ input
 /* BOTTOM BARS =================================
 
 .bar
+    box-sizing: border-box
     position: relative
     display: block
-    width: 300px
+    width: 100%
     &:before, &:after
         content: ''
         height: 2px
@@ -54,10 +58,6 @@ input
         transition: 0.2s ease all
         -moz-transition: 0.2s ease all
         -webkit-transition: 0.2s ease all
-    &:before
-        left: 50%
-    &:after
-        right: 50%
 
 /* active state
 
