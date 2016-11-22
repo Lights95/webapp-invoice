@@ -12,14 +12,6 @@
     width: 100%;
   }
 
-  /* line 16, ../sass/view.sass */
-  .inv-invoice-holder {
-    float: left;
-    width: 70%;
-    height: 100vh;
-    overflow-y: scroll;
-  }
-
   /* line 22, ../sass/view.sass */
   .inv-invoice__paper {
     margin: 20px auto;
